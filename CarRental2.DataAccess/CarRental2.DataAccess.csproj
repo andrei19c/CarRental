@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Admin\" />
-    <Folder Include="Repositories\User\" />
+    <ProjectReference Include="..\CarRental2.Domain\CarRental2.Domain.csproj" />
   </ItemGroup>
 
 </Project>
