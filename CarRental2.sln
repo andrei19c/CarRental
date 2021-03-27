@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental2.Api", "CarRental
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental2.Domain", "CarRental2.Domain\CarRental2.Domain.csproj", "{5E9C0625-3AB0-4002-AE87-E46634BEB36E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental2.Service.Tests", "CarRental2.Service.Tests\CarRental2.Service.Tests.csproj", "{00846754-0010-4498-AD01-48B54928E572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental2.Service.Tests", "CarRental2.Service.Tests\CarRental2.Service.Tests.csproj", "{00846754-0010-4498-AD01-48B54928E572}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental2.Service", "CarRental2.Service\CarRental2.Service.csproj", "{961703A1-B85E-44AE-8181-5BDE0229893A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental2.DataAccess", "CarRental2.DataAccess\CarRental2.DataAccess.csproj", "{7E042779-617F-4BEA-B23A-1AE552ABEF9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental2.DataAccess.Tests", "CarRental2.DataAccess.Tests\CarRental2.DataAccess.Tests.csproj", "{523C0905-DE97-4B9C-A761-52846AA3E92B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{961703A1-B85E-44AE-8181-5BDE0229893A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{961703A1-B85E-44AE-8181-5BDE0229893A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{961703A1-B85E-44AE-8181-5BDE0229893A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E042779-617F-4BEA-B23A-1AE552ABEF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E042779-617F-4BEA-B23A-1AE552ABEF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E042779-617F-4BEA-B23A-1AE552ABEF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E042779-617F-4BEA-B23A-1AE552ABEF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{523C0905-DE97-4B9C-A761-52846AA3E92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523C0905-DE97-4B9C-A761-52846AA3E92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523C0905-DE97-4B9C-A761-52846AA3E92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523C0905-DE97-4B9C-A761-52846AA3E92B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
