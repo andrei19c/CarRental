@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace CarRental2.Domain
+namespace CarRental2.Domain.Model
 {
     public partial class CarRentalContext : DbContext
     {
@@ -39,6 +39,8 @@ namespace CarRental2.Domain
                 entity.ToTable("Car");
 
                 entity.Property(e => e.Description).HasMaxLength(500);
+
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Manufacture)
                     .IsRequired()

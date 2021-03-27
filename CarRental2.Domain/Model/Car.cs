@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace CarRental2.Domain
+namespace CarRental2.Domain.Model
 {
     public partial class Car
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Manufacture { get; set; }
         public string Model { get; set; }
         public short Year { get; set; }
