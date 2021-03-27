@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarRental2.Domain\CarRental2.Domain.csproj" />
+    <ProjectReference Include="..\CarRental2.Service\CarRental2.Service.csproj" />
+  </ItemGroup>
+
 </Project>

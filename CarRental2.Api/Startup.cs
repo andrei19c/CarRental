@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarRental2.Service.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,8 @@ namespace CarRental2
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CarRental2", Version = "v1" });
             });
+
+            services.AddApplicationLayer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
