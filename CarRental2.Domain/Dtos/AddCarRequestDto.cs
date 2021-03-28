@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-#nullable disable
-
-namespace CarRental2.Domain.Model
+namespace CarRental2.Domain.Dtos
 {
-    public partial class Car
+    public class AddCarRequestDto
     {
-        public int Id { get; set; }
         public string Manufacture { get; set; }
         public string Model { get; set; }
         public short Year { get; set; }
@@ -17,11 +17,5 @@ namespace CarRental2.Domain.Model
         public int CarGroupId { get; set; }
         public decimal? StandardPrice { get; set; }
         public bool? IsAvailable { get; set; }
-        public DateTime? DateCreated { get; set; }
-        public DateTime? DateModified { get; set; }
-        public string CreatedBy { get; set; }
-        public string ModifiedBy { get; set; }
-
-        public virtual CarGroup CarGroup { get; set; }
     }
 }

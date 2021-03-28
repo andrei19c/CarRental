@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using CarRental2.DataAccess.Repositories;
-using CarRental2.Domain.Models;
+using CarRental2.Domain;
 using CarRental2.Domain.Queries;
 using MediatR;
 
@@ -20,10 +20,10 @@ namespace CarRental2.Service.Handlers.Queries
         }
         public async Task<CarResponseDto> Handle(GetCarQuery request, CancellationToken cancellationToken)
         {
-            var car = await _carRepository.GetCar(Convert.ToInt32(request.CarId));
+            var car = await _carRepository.GetCar(request.CarId);
             return new CarResponseDto
             {
-                Id = car.Id.ToString()
+                Id = car.CarGroup.Id
             };
         }
     }

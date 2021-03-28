@@ -9,10 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CarRental2.DataAccess\CarRental2.DataAccess.csproj" />
     <ProjectReference Include="..\CarRental2.Domain\CarRental2.Domain.csproj" />
   </ItemGroup>

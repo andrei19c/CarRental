@@ -18,6 +18,7 @@ namespace CarRental2.Domain.Model
         }
 
         public virtual DbSet<Car> Cars { get; set; }
+        public virtual DbSet<CarGroup> CarGroups { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,13 +35,15 @@ namespace CarRental2.Domain.Model
 
             modelBuilder.Entity<Car>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("Car");
 
-                entity.Property(e => e.Description).HasMaxLength(500);
+                entity.Property(e => e.CreatedBy).HasMaxLength(50);
 
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.DateModified).HasColumnType("datetime");
+
+                entity.Property(e => e.Description).HasMaxLength(500);
 
                 entity.Property(e => e.Manufacture)
                     .IsRequired()
@@ -50,12 +53,41 @@ namespace CarRental2.Domain.Model
                     .IsRequired()
                     .HasMaxLength(50);
 
+                entity.Property(e => e.ModifiedBy).HasMaxLength(50);
+
                 entity.Property(e => e.Observation).HasMaxLength(500);
+
+                entity.Property(e => e.StandardPrice).HasColumnType("decimal(18, 0)");
 
                 entity.Property(e => e.Vin)
                     .IsRequired()
                     .HasMaxLength(13)
                     .HasColumnName("VIN");
+
+                entity.HasOne(d => d.CarGroup)
+                    .WithMany(p => p.Cars)
+                    .HasForeignKey(d => d.CarGroupId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Car_CarGroup");
+            });
+
+            modelBuilder.Entity<CarGroup>(entity =>
+            {
+                entity.ToTable("CarGroup");
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(50);
+
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.DateModified).HasColumnType("datetime");
+
+                entity.Property(e => e.Description).HasMaxLength(500);
+
+                entity.Property(e => e.ModifiedBy).HasMaxLength(50);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarRental2.Domain.Commands;
 using CarRental2.Domain.Model;
 
 namespace CarRental2.DataAccess.Repositories
@@ -10,5 +11,6 @@ namespace CarRental2.DataAccess.Repositories
     public interface ICarRepository
     {
         Task<Car> GetCar(int id);
+        Task<Car> AddCar(AddCarCommand addCarCommand);
     }
 }

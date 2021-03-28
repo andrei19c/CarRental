@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarRental2.Domain.Models
+namespace CarRental2.Domain
 {
     public class CarResponseDto 
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

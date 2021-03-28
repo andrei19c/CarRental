@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CarRental2.Domain.Model;
+using MediatR;
 
-#nullable disable
-
-namespace CarRental2.Domain.Model
+namespace CarRental2.Domain.Commands
 {
-    public partial class Car
+    public class AddCarCommand : IRequest<AddCarResponseDto>
     {
-        public int Id { get; set; }
         public string Manufacture { get; set; }
         public string Model { get; set; }
         public short Year { get; set; }
@@ -21,7 +23,5 @@ namespace CarRental2.Domain.Model
         public DateTime? DateModified { get; set; }
         public string CreatedBy { get; set; }
         public string ModifiedBy { get; set; }
-
-        public virtual CarGroup CarGroup { get; set; }
     }
 }
